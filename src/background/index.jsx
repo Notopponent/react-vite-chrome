@@ -34,7 +34,6 @@ chrome.runtime.onInstalled.addListener(function () {
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     // 接收来自content script的消息，requset里不允许传递function和file类型的参数
     chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
-        console.log(tabs)
         const { contentRequest } = request
         // 接收来自content的api请求
         if (contentRequest === 'apiRequest') {

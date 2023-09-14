@@ -41,6 +41,4 @@ try {
     insertScript.setAttribute('type', 'text/javascript')
     insertScript.src = window.chrome.runtime.getURL('insert.js')
     document.body.appendChild(insertScript)
-} catch (err) {
-    // console.log(err)
-}
+} catch (err) {}

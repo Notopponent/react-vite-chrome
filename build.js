@@ -1,12 +1,3 @@
-/*  
-    通过 build.js 脚本合并三个build
-    1. 让Vite按照vite.popup.config.js打包popup项目，生成build目录。
-    2. 让Vite按照vite.content.config.js打包content script，生成临时的_build_content目录。
-    3. 让Vite按照vite.background.config.js打包background script，生成临时的_build_background目录。
-    4. 将_build_content目录和_build_background目录里的文件复制到build目录中。
-    5. 删除_build_script目录和_build_background目录。
-*/
-
 import fs from 'fs'
 import path from 'path'
 import { CRX_OUTDIR, CRX_CONTENT_OUTDIR, CRX_BACKGROUND_OUTDIR } from './globalConfig.js'

@@ -1,4 +1,3 @@
-
 import { RouterProvider } from 'react-router-dom'
 import { globalRouters } from '@/popup/router'
 import './popup.styl'

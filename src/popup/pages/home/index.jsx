@@ -1,4 +1,3 @@
-
 import './home.styl'
 
 function Home() {

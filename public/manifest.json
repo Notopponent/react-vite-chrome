@@ -1,8 +1,8 @@
 {
-    "name": "React-Vite-CRX",
-    "version": "1.0",
-    "description": "基于 React + Vite 实现的Chrome插件项目",
-    "manifest_version": 3,
+  "name": "React-Vite-Chrome",
+  "version": "1.0",
+  "description": "基于 React + Vite 实现的Chrome插件项目",
+  "manifest_version": 3,
     "background": {
       "service_worker": "background.js"
     },
@@ -14,6 +14,18 @@
         "run_at": "document_end"
       }
     ],
+    "permissions": ["storage","declarativeContent"],
+    "host_permissions":[],
+    "web_accessible_resources": [
+      {
+        "resources": [ "/images/app.png" ],
+        "matches": ["<all_urls>"]
+      },
+      {
+        "resources": [ "insert.js" ],
+        "matches": ["https://ant-design.antgroup.com/*"]
+      }
+    ],
     "action": {
       "default_popup": "index.html",
       "default_icon": {
@@ -22,7 +34,7 @@
         "48": "/images/app.png",
         "128": "/images/app.png"
       },
-      "default_title": "React-Vite-CRX"
+      "default_title": "React CRX MV3"
     },
     "icons": {
       "16": "/images/app.png",
